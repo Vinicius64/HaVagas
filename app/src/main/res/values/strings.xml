@@ -2,4 +2,6 @@
     <string name="app_name">HaVagas</string>
     <string name="full_name_required">Nome completo *</string>
     <string name="fullNameLabel">Nome completo</string>
+    <string name="email_required">E-mail *</string>
+    <string name="email">E-mail</string>
 </resources>
