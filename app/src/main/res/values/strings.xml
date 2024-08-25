@@ -11,4 +11,7 @@
     <string name="residential">Residencial</string>
     <string name="add_mobile_phone">Adicionar telefone celular</string>
     <string name="mobile_phone">Telefone celular</string>
+    <string name="gender">Gênero *</string>
+    <string name="male">Masculino</string>
+    <string name="female">Feminino</string>
 </resources>
