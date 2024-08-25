@@ -29,4 +29,6 @@
     <string name="institution">Instituição</string>
     <string name="thesis_title">Título da monografia</string>
     <string name="advisor">Orientador</string>
+    <string name="job_interests_required">Vagas de interesse *</string>
+    <string name="job_interests">Vagas de interesse</string>
 </resources>
