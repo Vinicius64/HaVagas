@@ -7,4 +7,6 @@
     <string name="email_updates">Deseja receber atualizações por e-mail?</string>
     <string name="phone_required">Telefone *</string>
     <string name="phone">Telefone</string>
+    <string name="commercial">Comercial</string>
+    <string name="residential">Residencial</string>
 </resources>

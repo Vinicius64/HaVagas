@@ -63,4 +63,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <RadioGroup
+        android:id="@+id/phoneTypeRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/phoneEt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <RadioButton
+            android:id="@+id/commercialRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commercial" />
+        <RadioButton
+            android:id="@+id/residentialRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/residential" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
