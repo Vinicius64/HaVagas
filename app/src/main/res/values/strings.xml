@@ -31,4 +31,6 @@
     <string name="advisor">Orientador</string>
     <string name="job_interests_required">Vagas de interesse *</string>
     <string name="job_interests">Vagas de interesse</string>
+    <string name="save">Salvar</string>
+    <string name="clear">Limpar</string>
 </resources>
