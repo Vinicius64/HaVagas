@@ -16,4 +16,17 @@
     <string name="female">Feminino</string>
     <string name="date_of_birth_required">Data de nascimento *</string>
     <string name="date_of_birth">Data de nascimento</string>
+    <string name="education_required">Formação *</string>
+    <string-array name="education_levels">
+        <item>Fundamental</item>
+        <item>Médio</item>
+        <item>Graduação</item>
+        <item>Especialização</item>
+        <item>Mestrado</item>
+        <item>Doutorado</item>
+    </string-array>
+    <string name="graduation_year">Ano de formatura</string>
+    <string name="institution">Instituição</string>
+    <string name="thesis_title">Título da monografia</string>
+    <string name="advisor">Orientador</string>
 </resources>
