@@ -127,4 +127,21 @@
             android:layout_height="wrap_content"
             android:text="@string/female" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/dobLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_birth_required"
+        app:layout_constraintTop_toBottomOf="@id/genderRg"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <EditText
+        android:id="@+id/dobEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/date_of_birth"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/dobLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
