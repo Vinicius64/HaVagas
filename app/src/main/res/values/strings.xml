@@ -5,4 +5,6 @@
     <string name="email_required">E-mail *</string>
     <string name="email">E-mail</string>
     <string name="email_updates">Deseja receber atualizações por e-mail?</string>
+    <string name="phone_required">Telefone *</string>
+    <string name="phone">Telefone</string>
 </resources>
