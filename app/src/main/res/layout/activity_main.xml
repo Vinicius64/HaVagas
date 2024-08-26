@@ -1,236 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/fullNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/full_name_required"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/fullNameEt"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/fullNameLabel"
-        android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@id/fullNameLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <TextView
-        android:id="@+id/emailLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email_required"
-        app:layout_constraintTop_toBottomOf="@id/fullNameEt"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/emailEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/emailLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <CheckBox
-        android:id="@+id/emailUpdatesCb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email_updates"
-        app:layout_constraintTop_toBottomOf="@id/emailEt"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <TextView
-        android:id="@+id/phoneLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/phone_required"
-        app:layout_constraintTop_toBottomOf="@id/emailUpdatesCb"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/phoneEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/phone"
-        android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/phoneLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/phoneTypeRg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/phoneEt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-        <RadioButton
-            android:id="@+id/commercialRb"
+        <TextView
+            android:id="@+id/fullNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/commercial" />
-        <RadioButton
-            android:id="@+id/residentialRb"
+            android:text="@string/full_name_required"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <EditText
+            android:id="@+id/fullNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fullNameLabel"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/fullNameLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/emailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/residential" />
-    </RadioGroup>
-
-    <CheckBox
-        android:id="@+id/addMobilePhoneCb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_mobile_phone"
-        app:layout_constraintTop_toBottomOf="@id/phoneTypeRg"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/mobilePhoneEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/mobile_phone"
-        android:inputType="phone"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/addMobilePhoneCb"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <TextView
-        android:id="@+id/genderLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gender"
-        app:layout_constraintTop_toBottomOf="@id/mobilePhoneEt"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <RadioGroup
-        android:id="@+id/genderRg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/genderLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-        <RadioButton
-            android:id="@+id/maleRb"
+            android:text="@string/email_required"
+            app:layout_constraintTop_toBottomOf="@id/fullNameEt"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/emailLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <CheckBox
+            android:id="@+id/emailUpdatesCb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/male" />
-        <RadioButton
-            android:id="@+id/femaleRb"
+            android:text="@string/email_updates"
+            app:layout_constraintTop_toBottomOf="@id/emailEt"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/phoneLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/female" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/dobLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_of_birth_required"
-        app:layout_constraintTop_toBottomOf="@id/genderRg"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/dobEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/date_of_birth"
-        android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@id/dobLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <TextView
-        android:id="@+id/educationLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/education_required"
-        app:layout_constraintTop_toBottomOf="@id/dobEt"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <Spinner
-        android:id="@+id/educationSp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/education_levels"
-        app:layout_constraintTop_toBottomOf="@id/educationLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <LinearLayout
-        android:id="@+id/educationDetailsLl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/educationSp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
+            android:text="@string/phone_required"
+            app:layout_constraintTop_toBottomOf="@id/emailUpdatesCb"
+            app:layout_constraintLeft_toLeftOf="parent" />
         <EditText
-            android:id="@+id/graduationYearEt"
+            android:id="@+id/phoneEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/graduation_year"
-            android:inputType="number" />
+            android:hint="@string/phone"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@id/phoneLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
-        <EditText
-            android:id="@+id/institutionEt"
+        <RadioGroup
+            android:id="@+id/phoneTypeRg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/institution"
-            android:inputType="text" />
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/phoneEt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <RadioButton
+                android:id="@+id/commercialRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/commercial" />
+            <RadioButton
+                android:id="@+id/residentialRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/residential" />
+        </RadioGroup>
 
+        <CheckBox
+            android:id="@+id/addMobilePhoneCb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_mobile_phone"
+            app:layout_constraintTop_toBottomOf="@id/phoneTypeRg"
+            app:layout_constraintLeft_toLeftOf="parent" />
         <EditText
-            android:id="@+id/thesisTitleEt"
+            android:id="@+id/mobilePhoneEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/thesis_title"
-            android:inputType="text"
-            android:visibility="gone" />
+            android:hint="@string/mobile_phone"
+            android:inputType="phone"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/addMobilePhoneCb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
-        <EditText
-            android:id="@+id/advisorEt"
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            app:layout_constraintTop_toBottomOf="@id/mobilePhoneEt"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <RadioGroup
+            android:id="@+id/genderRg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/advisor"
-            android:inputType="text"
-            android:visibility="gone" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/genderLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <RadioButton
+                android:id="@+id/maleRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+            <RadioButton
+                android:id="@+id/femaleRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" />
+        </RadioGroup>
 
-    <TextView
-        android:id="@+id/jobInterestsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/job_interests_required"
-        app:layout_constraintTop_toBottomOf="@id/educationDetailsLl"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <EditText
-        android:id="@+id/jobInterestsEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/job_interests"
-        android:inputType="textMultiLine"
-        app:layout_constraintTop_toBottomOf="@id/jobInterestsLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <Button
-        android:id="@+id/saveBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/save"
-        app:layout_constraintTop_toBottomOf="@id/jobInterestsEt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/dobLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_of_birth_required"
+            app:layout_constraintTop_toBottomOf="@id/genderRg"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <EditText
+            android:id="@+id/dobEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_of_birth"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/dobLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/educationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/education_required"
+            app:layout_constraintTop_toBottomOf="@id/dobEt"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <Spinner
+            android:id="@+id/educationSp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/education_levels"
+            app:layout_constraintTop_toBottomOf="@id/educationLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout
+            android:id="@+id/educationDetailsLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/educationSp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
-    <Button
-        android:id="@+id/clearBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        app:layout_constraintTop_toBottomOf="@id/saveBt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/graduationYearEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/graduation_year"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/institutionEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/institution"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/thesisTitleEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/thesis_title"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/advisorEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/advisor"
+                android:inputType="text"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/jobInterestsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/job_interests_required"
+            app:layout_constraintTop_toBottomOf="@id/educationDetailsLl"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <EditText
+            android:id="@+id/jobInterestsEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/job_interests"
+            android:inputType="textMultiLine"
+            app:layout_constraintTop_toBottomOf="@id/jobInterestsLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <Button
+            android:id="@+id/saveBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintTop_toBottomOf="@id/jobInterestsEt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/clearBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            app:layout_constraintTop_toBottomOf="@id/saveBt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
